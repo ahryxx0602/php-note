@@ -1,11 +1,5 @@
 <?php
 
-/*********************************************************
- * COOKIE & SESSION – ALL-IN-ONE (PHP 8+)
- * Tác giả: Thành & Tĩnh
- * Mục tiêu: Trình diễn toàn tập Session & Cookie trên 1 trang
- *********************************************************/
-
 declare(strict_types=1);
 
 // ---------- cấu hình & helpers ----------

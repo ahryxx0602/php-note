@@ -1,38 +1,32 @@
 <?php
-
-/*******************************************************
- * REGEX ALL-IN-ONE (PHP PCRE)
- * Tác giả: Thành & Tĩnh
- * Mục tiêu: Trình diễn đầy đủ RegEx trong PHP, có output
- *******************************************************/
 header('Content-Type: text/html; charset=UTF-8');
 
 // ===== UI helpers =====
 function h1($t)
 {
-              echo "<h1 style='font-family:system-ui;margin:16px 0;'>$t</h1>";
+  echo "<h1 style='font-family:system-ui;margin:16px 0;'>$t</h1>";
 }
 function h2($t)
 {
-              echo "<h2 style='font-family:system-ui;margin:12px 0;color:#374151;'>$t</h2>";
+  echo "<h2 style='font-family:system-ui;margin:12px 0;color:#374151;'>$t</h2>";
 }
 function p($t)
 {
-              echo "<p style='font-family:system-ui;line-height:1.6;margin:6px 0;'>$t</p>";
+  echo "<p style='font-family:system-ui;line-height:1.6;margin:6px 0;'>$t</p>";
 }
 function pre($t)
 {
-              echo "<pre style='background:#0b1220;color:#e5e7eb;padding:12px;border-radius:10px;overflow:auto;'>$t</pre>";
+  echo "<pre style='background:#0b1220;color:#e5e7eb;padding:12px;border-radius:10px;overflow:auto;'>$t</pre>";
 }
 function sep()
 {
-              echo "<hr style='margin:20px 0;border:0;border-top:1px solid #ddd;'>";
+  echo "<hr style='margin:20px 0;border:0;border-top:1px solid #ddd;'>";
 }
 function dump_match($matches)
 {
-              echo "<pre style='background:#0f172a;color:#d1d5db;padding:10px;border-radius:8px;overflow:auto;'>";
-              print_r($matches);
-              echo "</pre>";
+  echo "<pre style='background:#0f172a;color:#d1d5db;padding:10px;border-radius:8px;overflow:auto;'>";
+  print_r($matches);
+  echo "</pre>";
 }
 
 echo "<div style='max-width:1000px;margin:24px auto;padding:0 12px'>";
@@ -198,8 +192,8 @@ p("Kết quả: <b>$san</b>");
 $subject = "Tham khảo https://example.com và http://duytan.edu.vn";
 $pattern = '~\bhttps?://[^\s<]+~i';
 $linked = preg_replace_callback($pattern, function ($m) {
-              $url = htmlspecialchars($m[0], ENT_QUOTES, 'UTF-8');
-              return '<a href="' . $url . '" target="_blank">' . $url . '</a>';
+  $url = htmlspecialchars($m[0], ENT_QUOTES, 'UTF-8');
+  return '<a href="' . $url . '" target="_blank">' . $url . '</a>';
 }, $subject);
 p("Biến URL thành link bằng <code>preg_replace_callback</code>:");
 pre($linked);
